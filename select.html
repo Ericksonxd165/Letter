@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  href="./assets/img/logo.png" />
+
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Elige</title>
+</head>
+<body>
+    
+<header><Center><h1>Elige que haremos en nuestra cita</h1></Center></header>
+
+<div class="parent">
+    <div class="card">
+        <img class="image" src="./assets/img/1.jpg"  alt="">
+         <div class="content">
+           <a href="https://www.instagram.com/elbarcorest_24/">
+             <span class="title">
+<center>Cine + Cena</center>
+            </span>
+           </a>
+       
+           <p class="desc">
+Vamos al cine a ver una pelicula y
+despues a cenar a un restaurante lindo.
+<br>
+<center><b>Este Sábado</b></center>
+   
+        </p>
+       
+          <center>
+            <a class="action" id="select1" onclick="selectPlan('Cine + Cena')" href="#">
+                Elegir
+                <span aria-hidden="true">
+                  →
+                </span>
+              </a>
+          </center>
+         </div>
+       </div>
+
+       <div class="card">
+        <img class="image" src="./assets/img/3.jpg"></img>
+         <div class="content">
+           <a href="#">
+             <span class="title">
+Viaje a el chorreron de las monjas 
+             </span>
+           </a>
+       
+           <p class="desc">
+Iremos de aventura todo el dia cerca del paramo y calderas a conectar con la naturaleza.
+
+<center><b>16 de Marzo</b></center>
+<br>
+<center><span style="color: red;">Se puede cambiar de destino si quieres</span></center>
+        </p>
+       
+           <center><a class="action" id="select2" onclick="selectPlan('Viaje a el chorreron de las monjas')" href="#">
+            Elegir
+            <span aria-hidden="true">
+              →
+            </span>
+          </a></center>
+         </div>
+       </div>
+
+       <div class="card">
+        <img class="image" src="./assets/img/2.jpg"></img>
+         <div class="content">
+           <a href="#">
+             <span class="title">
+ Paint ball + Helado
+            </span>
+           </a>
+       
+           <p class="desc">
+Para este plan pondras todas tus habilidades de cuartico e soldado a prueba, y luego iremos a tomar/comer algo sabroso.
+            <center><b>Sabado 15 de Marzo a las 4:00PM</b></center>
+        </p>
+       
+          <center> <a class="action" id="select3" onclick="selectPlan('Paseo por Barinitas')" href="#">
+Elegir            <span aria-hidden="true">
+              →
+            </span>
+          </a></center>
+         </div>
+       </div>
+
+
+    
+</div>
+<script>
+
+
+   let planA = document.getElementById('select1');
+   let planB = document.getElementById('select2');
+   let planC = document.getElementById('select3');
+   const phoneNumber = '+584129293905';
+
+   select1.addEventListener('click', () => {
+   let sure1 = confirm(`Estas segura de elegir este plan?. 
+   De estarlo debes enviar el mensaje de texto por whatsapp para confirmar`);
+if(sure1){
+    alert('Perfecto, nos vemos el Sábado');
+    
+       const message = `He eligido: Cine + Cena`;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+   } }); 
+   
+   select2.addEventListener('click', () => {
+   let sure2 = confirm(`Estas segura de elegir este plan?. 
+   de estarlo debes enviar el mensaje de texto por whatsapp para confirmar`);
+if(sure2){
+    alert('Preparate entonces, Hasta el 16!');
+    const message = `He eligido: Viaje a el chorreron de las monjas`;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+   } }); 
+
+   select3.addEventListener('click', () => {
+   let sure3 = confirm(`Estas segura de elegir este plan?. 
+   de estarlo debes enviar el mensaje de texto por whatsapp para confirmar`);
+if(sure3){
+    alert('Ok linda, Hasta el sabado');
+    const message = `He eligido: Paint ball + Helado`;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+   } }); 
+
+</script>
+</body>
+</html>

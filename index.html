@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon"  href="./assets/img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación </title>
+  
+  </head>
+  <audio id="audio" controls>
+    <source type="audio/mp3" src="./assets/media/tfumeanno.mp3">
+    </audio>
+
+  
+  <body>
+    <button id="animateButton" class="animateButton">Abreme</button>
+
+  <div id="readButton" class="readButton  invisible "><span>Leer Carta</span></div>
+    <!-- Modal -->
+    <div id="myModal" class="modal  invisible">
+      <div class="modal-content">
+        <img src="/assets/img/letter.png" alt="Carta" style="width: 100%;">
+        <div class="modal-buttons">
+          <button id="yesButton">Sí</button>
+          <button id="noButton">No</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+
+const d = document;
+var audio = document.getElementById("audio");
+var audioy = d.getElementById("audioy");
+const $nobtn=d.getElementById('noButton')
+const $yesbtn=d.getElementById('yesButton')
+
+$nobtn.addEventListener('click', () => {
+audio.play();
+
+setTimeout(() => {
+  alert('No se aceptan No por respuesta');  
+  $nobtn.style.display='none';
+}, 2000);
+
+
+} )
+
+
+$yesbtn.addEventListener('click', () => {
+
+
+
+  alert('Gracias por aceptar');  
+window.location.href = './select.html';
+
+});
+
+
+
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
